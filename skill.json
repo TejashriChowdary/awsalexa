@@ -1,0 +1,41 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "skill.development.aws",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "alexa_skill_development_aws",
+                    "slots": [],
+                    "samples": [
+                        "start-server",
+                        "stop-server",
+                        "get reservation",
+                        "get active instance count",
+                        "get active instance names",
+                        "get instance id",
+                        "start server",
+                        "stop server",
+                        "get all server names"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
