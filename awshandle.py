@@ -35,15 +35,15 @@ class EC2Manager(object):
             instance_list = reservation.get('Instances', [])
             for instance in instance_list:
                 if instance.get('Tags', [{}])[0].get('Value') == server_name:
-                    return instance.get('i-0dfa82e43e53d4bf7')
+                    return instance.get('')
 
     def start_server(self, server_name):
         instance_id = self.get_instance_id(server_name)
-        self.ec2_handler.start_instances(InstanceIds=['i-0dfa82e43e53d4bf7'])
+        self.ec2_handler.start_instances(InstanceIds=[''])
 
     def stop_server(self, server_name):
         instance_id = self.get_instance_id(server_name)
-        self.ec2_handler.stop_instances(InstanceIds=['i-0dfa82e43e53d4bf7'])
+        self.ec2_handler.stop_instances(InstanceIds=[''])
 
     def get_all_server_names(self):
         instance_names = list()
@@ -56,14 +56,14 @@ class EC2Manager(object):
 
     def monitor_server(self,server_name):
         instance_id = self.get_instance_id(server_name)
-        self.ec2_handler.monitor_instances(InstanceIds=['i-0dfa82e43e53d4bf7'])
+        self.ec2_handler.monitor_instances(InstanceIds=[''])
         
     def unmonitor_server(self, server_name):
         instance_id = self.get_instance_id(server_name)
-        self.ec2_handler.unmonitor_instances(InstanceIds=['i-0dfa82e43e53d4bf7'])
+        self.ec2_handler.unmonitor_instances(InstanceIds=[''])
         
     def reboot_server(self, server_name):
         instance_id = self.get_instance_id(server_name)
-        self.ec2_handler.reboot_instances(InstanceIds=['i-0dfa82e43e53d4bf7'])
+        self.ec2_handler.reboot_instances(InstanceIds=[''])
         
     
